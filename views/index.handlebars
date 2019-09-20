@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../public/stylesheets/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <title>Scocre-Keeper</title>
+    <style>
+        body {
+            background-image: url(../pictures/grass2.png);
+            /* Center and scale the image nicely */
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-success" style="padding-left: 10%">Cricket match score keeper</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <form action="/current_score" method="post" style="padding-left: 10%" class="form-inline">
+                    <div class="form-group mb-2">
+                        <label for="staticEmail2" class="sr-only text-danger">Score</label>
+                        <input name="score" type="text" readonly class="form-control-plaintext text-danger"
+                            id="staticEmail2" value="Score example: '-,1,2,3,w,6'">
+                    </div>
+                    <div class="form-group mx-sm-3 mb-2">
+                        <label for="inputPassword2" class="sr-only">Score</label>
+                        <input type="text" class="form-control" id="inputPassword2" placeholder="Score">
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-2">Get Score</button>
+                </form>
+            </div>
+        </div>
+        <div style="padding-left: 20%;padding-top: 5%" class="row">
+            <div class="col-12">
+                <button type="button" class="btn btn-primary">
+                    Score <span class="badge badge-light">{{score}}</span>
+                    <span class="sr-only">Score</span>
+                </button>
+            </div>
+        </div>
+        <div style="padding-left: 20%;padding-top: 2%" class="row">
+            <div class="col-12">
+                <button type="button" class="btn btn-primary">
+                    Overs <span class="badge badge-light">{{overs}}</span>
+                    <span class="sr-only">Score</span>
+                </button>
+            </div>
+        </div>
+        {{!-- <div style="padding-left: 20%;padding-top: 2%" class="row">
+            <div class="col-12">
+                <button type="button" class="btn btn-primary">
+                    Wickets fallen <span class="badge badge-light">0</span>
+                    <span class="sr-only">Score</span>
+                </button>
+            </div>
+        </div> --}}
+        <div style="padding-left: 20%;padding-top: 2%" class="row">
+            <div class="col-12">
+                <button type="button" class="btn btn-primary">
+                    Wickets Total <span class="badge badge-light">{{wickets}}</span>
+                    <span class="sr-only">Score</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

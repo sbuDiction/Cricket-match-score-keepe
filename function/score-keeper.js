@@ -2,6 +2,7 @@ module.exports = function() {
   let total = 0;
   let over = 6;
   let wickets = 10;
+  let maxScore = 36;
   let index0 = 0;
   let index1 = 0;
   let index2 = 0;
@@ -42,6 +43,10 @@ module.exports = function() {
     return wickets;
   };
 
+  const max = () => {
+    return maxScore;
+  };
+
   const getTotal = () => {
     total = index0 + index1 + index2 + index3 + index4 + index5 + index6;
     return total;
@@ -51,6 +56,7 @@ module.exports = function() {
     addScore,
     displayOver,
     getTotal,
-    displayWickets
+    displayWickets,
+    max
   };
 };

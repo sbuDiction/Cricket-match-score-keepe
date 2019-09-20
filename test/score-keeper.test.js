@@ -8,8 +8,8 @@ describe("Score keeper Tests", function() {
   });
   it("should be able to take a score in this patern '(1,2,3,4,6,-)' ", function() {
     let score = scoreKeeper();
-    score.addScore("1,2,6,6,6,-");
-    assert.equal(score.getTotal(), 21);
+    score.addScore("1,6,6,6,6,-");
+    assert.equal(score.getTotal(), 25);
   });
   it("should be able to show the over left if the first over has been played ", function() {
     let score = scoreKeeper();

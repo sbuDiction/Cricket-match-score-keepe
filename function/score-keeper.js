@@ -12,6 +12,8 @@ module.exports = function() {
   let index6 = 0;
 
   const addScore = str => {
+    console.log(str);
+    
     var score = str.split(",");
     if (score.length === 6) {
       over--;
@@ -49,6 +51,8 @@ module.exports = function() {
 
   const getTotal = () => {
     total = index0 + index1 + index2 + index3 + index4 + index5 + index6;
+    console.log(total);
+    
     return total;
   };
 

@@ -27,20 +27,15 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1 class="text-success" style="padding-left: 10%">Cricket match score keeper</h1>
+                <h1 class="text-success" style="padding-left: 20%">Cricket match score keeper</h1>
             </div>
         </div>
         <div class="row">
             <div class="col-12">
-                <form action="/current_score" method="post" style="padding-left: 10%" class="form-inline">
-                    <div class="form-group mb-2">
-                        <label for="staticEmail2" class="sr-only text-danger">Score</label>
-                        <input name="score" type="text" readonly class="form-control-plaintext text-danger"
-                            id="staticEmail2" value="Score example: '-,1,2,3,w,6'">
-                    </div>
+                <form action="/current_score" method="post" style="padding-left: 18%" class="form-inline">
                     <div class="form-group mx-sm-3 mb-2">
                         <label for="inputPassword2" class="sr-only">Score</label>
-                        <input type="text" class="form-control" id="inputPassword2" placeholder="Score">
+                        <input type="text" name="score" class="form-control" id="inputPassword2" placeholder="Score">
                     </div>
                     <button type="submit" class="btn btn-primary mb-2">Get Score</button>
                 </form>
